@@ -200,6 +200,14 @@
     "I001",     # https://docs.astral.sh/ruff/rules/unsorted-imports
     "SIM117",   # https://docs.astral.sh/ruff/rules/multiple-with-statements
 ]
+"./scripts/footprint/compare_footprint" = [
+    "B008",     # https://docs.astral.sh/ruff/rules/function-call-in-default-argument
+    "E713",     # https://docs.astral.sh/ruff/rules/not-in-test
+    "I001",     # https://docs.astral.sh/ruff/rules/unsorted-imports
+    "SIM103",   # https://docs.astral.sh/ruff/rules/needless-bool
+    "UP031",    # https://docs.astral.sh/ruff/rules/printf-string-formatting
+    "UP032",    # https://docs.astral.sh/ruff/rules/f-string
+]
 "./scripts/footprint/fpdiff.py" = [
     "B023",     # https://docs.astral.sh/ruff/rules/function-uses-loop-variable
     "I001",     # https://docs.astral.sh/ruff/rules/unsorted-imports
@@ -212,6 +220,15 @@
     "I001",     # https://docs.astral.sh/ruff/rules/unsorted-imports
     "SIM401",   # https://docs.astral.sh/ruff/rules/if-else-block-instead-of-dict-get
     "UP015",    # https://docs.astral.sh/ruff/rules/redundant-open-modes
+]
+"./scripts/footprint/size_report" = [
+    "E501",     # https://docs.astral.sh/ruff/rules/line-too-long
+    "E713",     # https://docs.astral.sh/ruff/rules/not-in-test
+    "I001",     # https://docs.astral.sh/ruff/rules/unsorted-imports
+    "SIM102",   # https://docs.astral.sh/ruff/rules/collapsible-if
+    "SIM201",   # https://docs.astral.sh/ruff/rules/negate-equal-op
+    "UP030",    # https://docs.astral.sh/ruff/rules/format-literals
+    "UP032",    # https://docs.astral.sh/ruff/rules/f-string
 ]
 "./scripts/footprint/track.py" = [
     "E501",     # https://docs.astral.sh/ruff/rules/line-too-long
@@ -251,6 +268,13 @@
     "I001",     # https://docs.astral.sh/ruff/rules/unsorted-imports
     "UP030",    # https://docs.astral.sh/ruff/rules/format-literals
     "UP032",    # https://docs.astral.sh/ruff/rules/f-string
+]
+"./scripts/kconfig/diffconfig" = [
+    "E401",     # https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line
+    "I001",     # https://docs.astral.sh/ruff/rules/unsorted-imports
+    "SIM115",   # https://docs.astral.sh/ruff/rules/open-file-with-context-handler
+    "UP024",    # https://docs.astral.sh/ruff/rules/os-error-alias
+    "UP031",    # https://docs.astral.sh/ruff/rules/printf-string-formatting
 ]
 "./scripts/kconfig/guiconfig.py" = [
     "B006",     # https://docs.astral.sh/ruff/rules/mutable-argument-default
@@ -784,8 +808,10 @@ exclude = [
     "./scripts/dts/python-devicetree/src/devicetree/grutils.py",
     "./scripts/dts/python-devicetree/tests/test_dtlib.py",
     "./scripts/dts/python-devicetree/tests/test_edtlib.py",
+    "./scripts/footprint/compare_footprint",
     "./scripts/footprint/fpdiff.py",
     "./scripts/footprint/pack_as_twister.py",
+    "./scripts/footprint/size_report",
     "./scripts/footprint/track.py",
     "./scripts/footprint/upload_data.py",
     "./scripts/gen_gcov_files.py",
@@ -794,6 +820,7 @@ exclude = [
     "./scripts/get_maintainer.py",
     "./scripts/github_helpers.py",
     "./scripts/gitlint/zephyr_commit_rules.py",
+    "./scripts/kconfig/diffconfig",
     "./scripts/kconfig/guiconfig.py",
     "./scripts/kconfig/kconfigfunctions.py",
     "./scripts/kconfig/kconfiglib.py",
