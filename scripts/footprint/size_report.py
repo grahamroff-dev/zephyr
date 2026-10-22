@@ -18,6 +18,7 @@ import sys
 import re
 from pathlib import Path
 import json
+import gzip
 from bisect import bisect_left, bisect_right
 
 from packaging import version
@@ -1051,9 +1052,12 @@ def main():
                 data = dict()
                 data["symbols"] = exporter.export(root)
                 data["total_size"] = symsize
-                with open(jsonout, "w") as fp:
-                    json.dump(data, fp, indent=4)
-
+                if jsonout.lower().endswith('.gz'):
+                    with gzip.open(jsonout, "wt") as fp:
+                        json.dump(data, fp, indent=4)
+                else:
+                    with open(jsonout, "w") as fp:
+                        json.dump(data, fp, indent=4)
 
 if __name__ == "__main__":
     main()
